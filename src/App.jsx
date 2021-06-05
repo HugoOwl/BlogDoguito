@@ -7,18 +7,18 @@ import Pagina404 from './paginas/Pagina404'
 import Cabecalho from './components/Cabecalho'
 import Post from './paginas/Post'
 import Categoria from './paginas/Categoria'
-import Home1 from './paginas/Home/Home1';
 import Login from './paginas/Login/Login';
 function App() {
 
   return (
     <Router>
-      <Route exact path='/login' component={Login} />
-      
       <Cabecalho />
       <Switch>
-        <Route>
-          <Home path='/'/>
+      <Route path="/login">
+        <Login/>
+      </Route>
+        <Route exact path='/'>
+          <Home/>
         </Route>
         <Route path='/sobre'>
           <Sobre />
